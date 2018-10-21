@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="davcd">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>davcd | Personal website</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+</head>
+
+<body>
+
+        
+    <div class="fixed">
+        <div class="wrapper">
+            <div class="header">
+                <div class="logo">
+                    <a href="../">
+                        <img src="../img/logo.svg">
+                    </a>
+                </div>
+                <label for="show" class="icon"><span></span></label>
+                <input type="checkbox" id="show">
+                <div class="nav">
+                    <ul>
+                        <li><a href="../about/">About</a></li>
+                        <li><a href="../skills/">Skills</a></li>
+                        <li><a href="../code/">Code</a></li>
+                        <li><a href="../contact/">Contact</a></li>
+                        <li><a href="../blog/">Blog</a></li>
+                    </ul>                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">    
+        <div id="form" class="container">
+            <div class="content">
+                <div class="contact-form">
+
+                    <h1>Please dont hesitate to write me for any question, job inquiries, give feedback, or just say me hello!</h1>
+                    
+                    <form method="post" name="form" novalidate>
+                        <input id="f-name" type="text" name="name" placeholder="Name*" onchange="changeFName();"/>
+                        <input id="f-email"type="email" name="email" placeholder="your@email.com*" onchange="changeFEmail();"/>
+                        <textarea id="f-message"name="message" placeholder="Message*" onchange="changeFMessage();"></textarea>
+                        <button id="f-submit" type="button" onclick="clickSubmit();"><span>Send</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="resume" class="container">
+            <div class="content">
+                <div class="contact-resume">
+                    <div class="scheme">
+                        <div class="text top email">
+                            <a href="#form">
+                                <div>
+                                    <p>email</p>
+                                </div>
+                                <div class="bracket"></div>
+                            </a>
+                        </div>
+                        <div class="text top web" onmouseover="moverWeb()" onmouseleave="resetEmail()">
+                            <a href="https://davcd.com">
+                                <div>
+                                    <p>web</p>
+                                </div>
+                                <div class="bracket"></div>
+                            </a>
+                        </div>                        
+                        <svg id="email" viewBox="0 0 787 148" onclick="selectEmail();">
+                            <text id="hello" x="0" y="100">hello</text>
+                            <text id="at" x="216" y="100">@</text>
+                            <text x="311" y="100">davcd</text>
+                            <text id="dotcom" x="574" y="100">.com</text>
+                        </svg>
+                        <div id="social" class="text bottom social" onmouseover="moverSocial()" onmouseleave="resetEmail()">
+                            <div class="bracket"></div>
+                            <div>
+                                <p>social</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="links" class="links contact" onmouseover="moverLink()" onmouseleave="moutLink()">
+                        <span class="linkedin">
+                            <a href="https://www.linkedin.com/in/davcd/" target="_blank">
+                                <svg viewBox="0 0 36 36">
+                                    <path d="M33.34,0H2.66A2.63,2.63,0,0,0,0,2.6V33.4A2.63,2.63,0,0,0,2.66,36H33.34A2.63,2.63,0,0,0,36,33.4V2.6A2.63,2.63,0,0,0,33.34,0ZM10.68,30.68H5.33V13.5h5.34ZM8,11.15a3.1,3.1,0,1,1,3.09-3.1A3.1,3.1,0,0,1,8,11.15ZM30.68,30.68H25.34V22.32c0-2,0-4.56-2.77-4.56s-3.2,2.17-3.2,4.41v8.5H14V13.5h5.12v2.35h.07a5.61,5.61,0,0,1,5.05-2.77c5.41,0,6.41,3.56,6.41,8.18Z"/>
+                                </svg>
+                            </a>
+                        </span>
+                        <span class="github">
+                            <a href="https://github.com/davcd" target="_blank">
+                                <svg viewBox="0 0 32.58 31.77">
+                                    <path d="M16.29,0a16.29,16.29,0,0,0-5.15,31.75c.81.15,1.11-.35,1.11-.79s0-1.41,0-2.77C7.7,29.18,6.74,26,6.74,26a4.31,4.31,0,0,0-1.81-2.38c-1.48-1,.11-1,.11-1a3.42,3.42,0,0,1,2.5,1.68,3.47,3.47,0,0,0,4.74,1.35,3.48,3.48,0,0,1,1-2.18C9.7,23.08,5.9,21.68,5.9,15.44a6.3,6.3,0,0,1,1.68-4.37,5.86,5.86,0,0,1,.16-4.31s1.37-.44,4.48,1.67a15.44,15.44,0,0,1,8.16,0c3.11-2.11,4.48-1.67,4.48-1.67A5.85,5.85,0,0,1,25,11.07a6.29,6.29,0,0,1,1.67,4.37c0,6.26-3.81,7.63-7.44,8a3.89,3.89,0,0,1,1.11,3c0,2.18,0,3.93,0,4.47s.29.94,1.12.78A16.29,16.29,0,0,0,16.29,0Z"/>
+                                </svg>
+                            </a>
+                        </span>
+                        <span class="stackoverflow">
+                            <a href="https://stackoverflow.com/users/9522410/davcd" target="_blank">
+                                <svg viewBox="0 0 73.1 86.6">
+                                    <path class="gray" d="M61.8,78.9V55.7h7.7V86.6H0V55.7H7.7V78.9Z"/>
+                                    <path class="orange" d="M16.2,53.5,54,61.4l1.6-7.6L17.8,45.9Zm5-18,35,16.3,3.2-7-35-16.4Zm9.7-17.2L60.6,43l4.9-5.9L35.8,12.4ZM50.1,0,43.9,4.6l23,31L73.1,31ZM15.4,71.1H54V63.4H15.4Z"/>
+                                </svg>
+                            </a>
+                        </span>
+                        <span class="medium">
+                            <a href="https://medium.com/@davcd" target="_blank">
+                                <svg viewBox="0 0 131 104">
+                                    <path d="M15.53,21.22a5.07,5.07,0,0,0-1.65-4.28L1.65,2.2V0h38L69,64.38,94.79,0H131V2.2l-10.46,10a3.06,3.06,0,0,0-1.16,2.93V88.84a3.06,3.06,0,0,0,1.16,2.93l10.21,10V104H79.38v-2.2L90,91.53c1-1,1-1.35,1-2.93V29L61.59,103.76h-4L23.36,29V79.12a6.91,6.91,0,0,0,1.9,5.75L39,101.55v2.2H0v-2.2L13.76,84.86a6.66,6.66,0,0,0,1.77-5.75Z"/>                                
+                                </svg>
+                            </a>
+                        </span>
+                        <span class="twitter">
+                            <a href="https://twitter.com/davcd_" target="_blank">
+                                <svg viewBox="0 0 250 203.14">
+                                    <path d="M78.62,203.14C173,203.14,224.56,125,224.56,57.2c0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,250,24a102.38,102.38,0,0,1-29.46,8.07A51.47,51.47,0,0,0,243.09,3.72a102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,17.4,9.36,51.33,51.33,0,0,0,33.28,77.83,50.91,50.91,0,0,1,10,71.41v.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,0,180.1a145.21,145.21,0,0,0,78.62,23"/>                                
+                                </svg>
+                            </a>
+                        </span>
+                        <span class="instagram">
+                            <a href="https://www.instagram.com/davcd/" target="_blank">
+                                <svg viewBox="0 0 503.84 503.84">
+                                    <defs>
+                                        <radialGradient id="instagram-gradient" r="150%" cx="30%" cy="107%">
+                                            <stop stop-color="#fdf497" offset="0" />
+                                            <stop stop-color="#fdf497" offset="0.05" />
+                                            <stop stop-color="#fd5949" offset="0.45" />
+                                            <stop stop-color="#d6249f" offset="0.6" />
+                                            <stop stop-color="#285AEB" offset="0.9" />
+                                        </radialGradient>
+                                    </defs>
+                                    <path d="M251.92,45.39c67.27,0,75.23.26,101.8,1.47,24.56,1.12,37.9,5.22,46.78,8.67a78.05,78.05,0,0,1,29,18.84,78.05,78.05,0,0,1,18.84,29c3.45,8.88,7.55,22.22,8.67,46.78,1.21,26.56,1.47,34.53,1.47,101.8s-.26,75.23-1.47,101.8c-1.12,24.56-5.22,37.9-8.67,46.78a83.43,83.43,0,0,1-47.81,47.81c-8.88,3.45-22.22,7.55-46.78,8.67-26.56,1.21-34.53,1.47-101.8,1.47s-75.24-.26-101.8-1.47c-24.56-1.12-37.9-5.22-46.78-8.67a78.05,78.05,0,0,1-29-18.84,78.05,78.05,0,0,1-18.84-29c-3.45-8.88-7.55-22.22-8.67-46.78-1.21-26.56-1.47-34.53-1.47-101.8s.26-75.23,1.47-101.8c1.12-24.56,5.22-37.9,8.67-46.78a78.05,78.05,0,0,1,18.84-29,78.05,78.05,0,0,1,29-18.84c8.88-3.45,22.22-7.55,46.78-8.67,26.56-1.21,34.53-1.47,101.8-1.47m0-45.39c-68.42,0-77,.29-103.87,1.52S102.93,7,86.9,13.23A123.49,123.49,0,0,0,42.28,42.28,123.49,123.49,0,0,0,13.23,86.9C7,102.93,2.74,121.24,1.52,148.05S0,183.5,0,251.92s.29,77,1.52,103.87S7,400.91,13.23,416.94a123.49,123.49,0,0,0,29.06,44.62A123.49,123.49,0,0,0,86.9,490.62c16,6.23,34.34,10.49,61.15,11.71s35.45,1.52,103.87,1.52,77-.29,103.87-1.52,45.13-5.48,61.15-11.71a128.82,128.82,0,0,0,73.68-73.68c6.23-16,10.49-34.34,11.71-61.15s1.52-35.45,1.52-103.87-.29-77-1.52-103.87-5.48-45.13-11.71-61.15a123.49,123.49,0,0,0-29.06-44.62,123.49,123.49,0,0,0-44.62-29.06C400.91,7,382.6,2.74,355.79,1.52S320.34,0,251.92,0Z"/>
+                                    <path d="M251.92,122.56A129.36,129.36,0,1,0,381.29,251.92,129.36,129.36,0,0,0,251.92,122.56Zm0,213.34a84,84,0,1,1,84-84A84,84,0,0,1,251.92,335.89Z"/>
+                                    <circle cx="386.4" cy="117.44" r="30.23"/>
+                                </svg>
+                            </a>
+                        </span>
+                        <span class="telegram">
+                            <a href="https://t.me/davcd" target="_blank">
+                                <svg viewBox="0 0 256 256">
+                                    <circle cx="128" cy="128" r="128"/>
+                                    <path class="white" d="m 155.91221,156.28613 c 3.82213,-10.4461 17.81729,-50.17266 20.06432,-60.591798 2.54062,-11.780443 -2.77796,-12.930544 -14.87454,-8.979356 -12.09657,3.951189 -43.11909,15.449414 -48.34049,17.302714 -5.2214,1.8533 -30.641435,10.39687 -35.911664,12.9461 -10.764524,5.77386 -5.528019,14.58535 6.505791,19.16062 35.967683,17.26467 25.754703,8.46685 41.812423,40.41274 3.30464,8.16089 11.09674,22.06171 18.5597,11.55404 3.92326,-5.97624 9.17875,-23.5903 12.18446,-31.80506 z"/>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+<script>
+
+
+var hello = document.getElementById('hello');
+var at = document.getElementById('at');
+var dotcom = document.getElementById('dotcom');
+var social = document.getElementById('social');
+var links = document.getElementById('links');
+
+
+function moverWeb(){
+    hello.style.fill=('#dddddd');
+    at.style.fill=('#dddddd');
+}
+
+function moverSocial(){
+    hello.style.fill=('#dddddd');
+    dotcom.style.fill=('#dddddd');
+
+    links.classList.add("hover");
+}
+
+function resetEmail(){
+    hello.style.fill=('#222222');
+    at.style.fill=('#222222');
+    dotcom.style.fill=('#222222');
+
+    links.classList.remove("hover");
+}
+
+function moverLink(){
+    social.classList.add("hover");
+
+    hello.style.fill=('#dddddd');
+    dotcom.style.fill=('#dddddd');
+}
+
+function moutLink(){
+    social.classList.remove("hover");
+
+    hello.style.fill=('#222222');
+    dotcom.style.fill=('#222222');
+}
+
+function selectEmail(){
+    var email = document.getElementById('email');
+    if (document.body.createTextRange) {
+        const range = document.body.createTextRange();
+        range.moveToElementText(email);
+        range.select();
+    } else if (window.getSelection) {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(email);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }    
+}
+
+var fname = document.getElementById('f-name');
+var femail = document.getElementById('f-email');
+var fmessage = document.getElementById('f-message');
+var fsubmit = document.getElementById('f-submit');
+
+function changeFName(){    
+    if(fname.value.length>=1){
+        fname.classList.remove("error");
+        return true;
+    }
+    else{
+        fname.classList.add("error");
+        return false;
+    }
+};
+
+function changeFEmail(){ 
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(re.test(femail.value)){
+        femail.classList.remove("error");
+        return true;
+    }
+    else{
+        femail.classList.add("error");
+        return false;
+    }
+}
+
+function changeFMessage(){    
+    if(fmessage.value.length>1){
+        fmessage.classList.remove("error");
+        return true;
+    }
+    else{
+        fmessage.classList.add("error");
+        return false;
+    }
+}
+
+function clickSubmit(){
+    var fnameStatus = changeFName();
+    var fmailStatus = changeFEmail();
+    var fmessageStatus = changeFMessage();
+    if(fnameStatus && fmailStatus && fmessageStatus){
+        document.form.submit();
+        return true;
+    }else{
+
+     return false;   
+    }
+}
+</script>
+
+</body>
+
+</html>

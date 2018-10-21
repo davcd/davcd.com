@@ -342,11 +342,7 @@ template {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-}
-
-.wrapper {
-  max-width: 1600px;
-  margin: 0 auto;
+  color: #222222;
 }
 
 .fixed {
@@ -354,26 +350,29 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 100;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.wrapper > .container:first-child .content {
+  padding-top: 160px;
 }
 
 .container {
-  margin: 0 4vw;
+  margin: 0 auto;
+  width: 90%;
   background-color: rgba(255, 255, 255, 0.985);
   border-bottom: 2px solid #fafafa;
+  height: auto;
 }
 
 .content {
-  margin: 0 2vw;
-}
-
-@media (max-width: 799px) {
-  .content div {
-    float: none;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    display: block;
-  }
+  padding: 80px 0;
+  margin: 0 2%;
 }
 
 /*
@@ -381,8 +380,8 @@ body {
 */
 .header {
   width: auto;
-  height: 70px;
-  margin: 0 4vw;
+  height: 80px;
+  margin: 0 5%;
   background-color: rgba(255, 255, 255, 0.985);
   border-bottom: 2px solid rgba(250, 250, 250, 0.985);
 }
@@ -392,7 +391,7 @@ body {
   float: left;
   width: 50px;
   height: 30px;
-  margin: 20px 0 20px 2vw;
+  margin: 20px 0 20px 2%;
 }
 
 .header .logo a {
@@ -401,9 +400,29 @@ body {
   height: 30px;
 }
 
+.header .icon {
+  display: none;
+  float: right;
+  width: 20px;
+  height: 10px;
+  margin: 35px 0;
+}
+
+.header .icon span {
+  display: block;
+  height: 2px;
+  cursor: pointer;
+  border-bottom: 6px double #222222;
+  border-top: 2px solid #222222;
+}
+
+.header #show {
+  display: none;
+}
+
 .header .nav {
   height: 30px;
-  margin: 20px 2vw 20px 0;
+  margin: 25px 2% 25px 0;
   float: right;
 }
 
@@ -430,27 +449,7 @@ body {
   color: #222222;
 }
 
-.header .icon {
-  display: none;
-  float: right;
-  width: 20px;
-  height: 10px;
-  margin: 30px 0;
-}
-
-.header .icon span {
-  display: block;
-  height: 2px;
-  cursor: pointer;
-  border-bottom: 6px double #222222;
-  border-top: 2px solid #222222;
-}
-
-.header #show {
-  display: none;
-}
-
-@media (min-width: 695px) {
+@media (min-width: 710px) {
   .header .nav ul li:first-child {
     margin-left: 0;
   }
@@ -465,21 +464,19 @@ body {
   }
   .header .nav ul li:last-child:hover a {
     background-color: #222222;
-    color: #ffffff;
+    color: white;
   }
 }
 
-@media (max-width: 694px) {
-  .header .nav {
-    display: none;
-  }
-  .header #show:checked ~ nav {
-    display: block;
-  }
+@media (max-width: 709px) {
   .header .icon {
     display: block;
   }
+  .header #show:checked ~ .nav {
+    display: block;
+  }
   .header .nav {
+    display: none;
     position: relative;
     height: auto;
     width: 100%;
@@ -501,31 +498,417 @@ body {
 /*
     Content
 */
-.presentation > * {
+.about-resume {
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.about-resume > * {
   vertical-align: middle;
 }
 
-.presentation {
-  padding-top: 80px;
-  white-space: nowrap;
-}
-
-.hello {
+.about-resume .hello {
   display: inline-block;
   width: 60%;
   height: auto;
   white-space: normal;
+  margin-right: 10%;
 }
 
-.avatar {
+.about-resume .hello h1 {
+  font-size: 35px;
+}
+
+.about-resume .hello p {
+  font-size: 20px;
+}
+
+.about-resume .hello p a {
+  text-decoration: none;
+  color: #aaaaaa;
+  border-bottom: 1px dashed rgba(170, 170, 170, 0.4);
+}
+
+.about-resume .hello p a:hover {
+  color: #888888;
+  border-bottom: 1px dashed rgba(136, 136, 136, 0.4);
+}
+
+.about-resume .avatar {
   display: inline-block;
-  width: 40%;
+  width: 30%;
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 799px) {
-  .avatar {
+  .about-resume .hello {
+    float: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: block;
+  }
+  .about-resume .avatar {
+    float: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: block;
     max-width: 300px;
     margin: 0 auto;
   }
+}
+
+.contact-resume {
+  width: 80%;
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+.contact-resume a {
+  text-decoration: none;
+  display: block;
+}
+
+.contact-resume .scheme svg {
+  font-size: 100px;
+  line-height: 100px;
+}
+
+.contact-resume .scheme svg text {
+  -webkit-transition-delay: 40ms;
+  transition-delay: 40ms;
+}
+
+.contact-resume .scheme .text {
+  height: auto;
+  position: relative;
+  z-index: 90;
+}
+
+.contact-resume .scheme .text.email {
+  width: 99%;
+  margin-left: 0.5%;
+}
+
+.contact-resume .scheme .text.web {
+  margin-top: 4%;
+  width: 59.75%;
+  margin-left: 39.75%;
+}
+
+.contact-resume .scheme .text.social {
+  width: 44.5%;
+  margin-left: 27.75%;
+}
+
+.contact-resume .scheme .text p {
+  color: rgba(170, 170, 170, 0.6);
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  -webkit-transition-delay: 40ms;
+  transition-delay: 40ms;
+}
+
+.contact-resume .scheme .text .bracket {
+  width: 100%;
+  height: 4px;
+  border: 2px solid #dddddd;
+  -webkit-transition-delay: 40ms;
+  transition-delay: 40ms;
+}
+
+.contact-resume .scheme .text:hover .bracket, .contact-resume .scheme .text.hover .bracket {
+  border: 2px solid #aaaaaa;
+}
+
+.contact-resume .scheme .text:hover p, .contact-resume .scheme .text.hover p {
+  color: rgba(34, 34, 34, 0.6);
+}
+
+.contact-resume .scheme .text.bottom .bracket {
+  border-top: none;
+}
+
+.contact-resume .scheme .text.top .bracket {
+  border-bottom: none;
+}
+
+.contact-resume .scheme .text.bottom p {
+  margin-top: 4px;
+}
+
+.contact-resume .scheme .text.top p {
+  margin-bottom: 10px;
+}
+
+.contact-resume .links {
+  text-align: center;
+  margin: 80px auto 10px auto;
+  font-size: 0;
+  width: 100%;
+}
+
+.contact-resume .links span {
+  display: inline-block;
+  position: relative;
+}
+
+.contact-resume .links span svg {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.contact-resume .links span svg path,
+.contact-resume .links span svg circle,
+.contact-resume .links span svg text {
+  fill: #aaaaaa;
+  fill-rule: evenodd;
+  -webkit-transition-delay: 40ms;
+  transition-delay: 40ms;
+}
+
+.contact-resume .links span svg .white {
+  fill: white;
+}
+
+.contact-resume .links span.linkedin:hover path {
+  fill: #0077B5;
+}
+
+.contact-resume .links span.github:hover path {
+  fill: #1E1D16;
+}
+
+.contact-resume .links span.stackoverflow:hover .gray {
+  fill: #bcbbbb;
+}
+
+.contact-resume .links span.stackoverflow:hover .orange {
+  fill: #f48023;
+}
+
+.contact-resume .links span.medium:hover path {
+  fill: #1C1B1A;
+}
+
+.contact-resume .links span.twitter:hover path {
+  fill: #1DA1F2;
+}
+
+.contact-resume .links span.instagram:hover path,
+.contact-resume .links span.instagram:hover circle {
+  fill: #d6249f;
+  fill: url(#instagram-gradient);
+}
+
+.contact-resume .links span.telegram:hover circle {
+  fill: #2ca5e0;
+}
+
+.contact-resume .links.index {
+  max-width: 280px;
+}
+
+.contact-resume .links.index span {
+  margin: 0 4.5%;
+  width: 10.5%;
+  padding-top: 10.5%;
+}
+
+.contact-resume .links.index span.linkedin {
+  padding-left: 0%;
+}
+
+.contact-resume .links.index span.github {
+  padding-left: 0.2667%;
+}
+
+.contact-resume .links.index span.medium {
+  padding-left: 2.7258%;
+}
+
+.contact-resume .links.index span.twitter {
+  padding-left: 2.4213%;
+}
+
+.contact-resume .links.index span.more {
+  padding-left: 0;
+  font-size: 36px;
+  margin-right: 0.7074%;
+}
+
+.contact-resume .links.index span.more :hover text {
+  fill: #555555;
+}
+
+.contact-resume .links.contact {
+  max-width: 450px;
+}
+
+.contact-resume .links.contact span {
+  margin: 0 3.2%;
+  width: 7.5%;
+  padding-top: 7.5%;
+}
+
+.contact-resume .links.contact span.linkedin {
+  padding-left: 0%;
+}
+
+.contact-resume .links.contact span.github {
+  padding-left: 0.1905%;
+}
+
+.contact-resume .links.contact span.stackoverflow {
+  margin-right: 2.03075%;
+}
+
+.contact-resume .links.contact span.medium {
+  padding-left: 1.947%;
+}
+
+.contact-resume .links.contact span.twitter {
+  padding-left: 1.7295%;
+}
+
+.contact-resume .links.contact span.instagram {
+  padding-left: 0%;
+}
+
+.contact-resume .links.contact span.telegram {
+  padding-left: 0%;
+}
+
+.contact-resume .links:hover span svg path,
+.contact-resume .links:hover span svg circle,
+.contact-resume .links:hover span svg text,
+.contact-resume .links.hover span svg path,
+.contact-resume .links.hover span svg circle,
+.contact-resume .links.hover span svg text {
+  fill: #888888;
+  fill-rule: evenodd;
+}
+
+.contact-resume .links:hover span svg .white,
+.contact-resume .links.hover span svg .white {
+  fill: white;
+}
+
+@media (max-width: 709px) {
+  .contact-resume .scheme .text p {
+    font-size: 16px;
+  }
+}
+
+.contact-form h1 {
+  font-size: 35px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-form form {
+  max-width: 500px;
+  margin: 60px auto 0 auto;
+  text-align: center;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width: 96%;
+  padding: 2%;
+  margin: 3% 0;
+  -webkit-box-shadow: 0 0 0 2px whitesmoke;
+          box-shadow: 0 0 0 2px whitesmoke;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  color: #222222;
+}
+
+.contact-form form input::-ms-clear,
+.contact-form form textarea::-ms-clear {
+  display: none;
+}
+
+.contact-form form input::-webkit-input-placeholder,
+.contact-form form textarea::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+
+.contact-form form input:-ms-input-placeholder,
+.contact-form form textarea:-ms-input-placeholder {
+  color: #aaaaaa;
+}
+
+.contact-form form input::-ms-input-placeholder,
+.contact-form form textarea::-ms-input-placeholder {
+  color: #aaaaaa;
+}
+
+.contact-form form input::placeholder,
+.contact-form form textarea::placeholder {
+  color: #aaaaaa;
+}
+
+.contact-form form input.error,
+.contact-form form textarea.error {
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.15);
+          box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.15);
+}
+
+.contact-form form input:hover,
+.contact-form form input:focus,
+.contact-form form textarea:hover,
+.contact-form form textarea:focus {
+  -webkit-box-shadow: 0 0 0 2px #ebebeb;
+          box-shadow: 0 0 0 2px #ebebeb;
+}
+
+.contact-form form input:hover.error,
+.contact-form form input:focus.error,
+.contact-form form textarea:hover.error,
+.contact-form form textarea:focus.error {
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2);
+          box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2);
+}
+
+.contact-form form textarea {
+  min-height: 50px;
+  height: 100px;
+  max-width: 96%;
+  min-width: 96%;
+}
+
+.contact-form form button {
+  padding: 0 18px;
+  -webkit-box-shadow: 0 0 0 2px #222222;
+          box-shadow: 0 0 0 2px #222222;
+  border-radius: 4px;
+  border: 0;
+  background-color: white;
+  color: #222222;
+  height: 30px;
+  margin: 3% 0;
+  line-height: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.contact-form form button:hover {
+  -webkit-box-shadow: 0 0 0 2px #222222;
+          box-shadow: 0 0 0 2px #222222;
+  background-color: #222222;
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */

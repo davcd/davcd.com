@@ -1,0 +1,45 @@
+<svg version="1.1" id="cd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-500 -300 1000 600" enable-background="new 0 0 1000 600" xml:space="preserve">
+ 
+	<defs>
+	
+		<rect id="dl_barra_std" x="-57.5" y="-350" width="115" height="700" transform="rotate(-15)"/>
+
+		<mask id="dl_m_general">
+
+			<rect x="-500" y="-300" width="300" height="600" fill="#ffffff" />
+			<rect x="200" y="-300" width="300" height="600" fill="#ffffff" />
+			<rect x="-200" y="-300" width="400" height="600" fill="#000000" />
+
+			<circle cx="-200" cy="0" r="185" fill="#000000"/>	
+			<circle cx="200" cy="0" r="185" fill="#000000"/>		
+			
+			<rect x="-200" y="-300" width="400" height="115" fill="#ffffff" />
+			<rect x="-200" y="185" width="400" height="115" fill="#ffffff" />
+			
+			<use xlink:href="#dl_barra_std" x="-115" fill="#000000" />
+			<use xlink:href="#dl_barra_std" x="115" fill="#000000" />
+			<use xlink:href="#dl_barra_std" fill="#ffffff"/>
+
+			<rect x="-100" y="-300" width="350" height="115" fill="#ffffff"/>			
+
+		</mask>
+
+		<mask id="dl_m_barra">
+
+			<rect x="-150" y="-300" width="300" height="600" fill="#ffffff"/>
+
+		</mask>	
+
+ 	</defs>
+
+  	<circle id="dl_semic_izq" cx="-200" cy="0" r="300" fill="#222222" mask="url(#dl_m_general)"/>
+  	<circle id="dl_semic_der" cx="200" cy="0" r="300" fill="#222222" mask="url(#dl_m_general)"/>
+
+	<use id="dl_barra_general" xlink:href="#dl_barra_std" fill="#222222" mask="url(#dl_m_barra)"/>
+
+	<rect id="dl_linea_sup" x="-200" y="-300" width="400" fill="#222222" height="115" mask="url(#dl_m_general)"/>
+	<rect id="dl_linea_inf" x="-200" y="185" width="400" fill="#222222" height="115" mask="url(#dl_m_general)"/>
+
+
+</svg>
+	

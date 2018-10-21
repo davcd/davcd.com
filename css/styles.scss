@@ -1,0 +1,238 @@
+/*
+    Definition of variables
+*/
+
+$font: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+$colorPrimary: #222222;
+$colorSecondary: #444444;
+$colorWhite: #ffffff;
+
+$maxWidth:1600px;
+$innerMargin:2vw;
+$outterMargin:4vw;
+
+$headerLimitWidth:695px;
+$headerHeight:70px;
+$headerOpacity:0.985;
+
+$navHeight:30px;
+$navLastBorder:2px;
+$navIconHeight:2px;
+$navIconWidth:20px;
+
+$contentLimitWidth:800px;
+
+
+
+/*
+    Common / Reusable
+*/
+
+@import 'normalize';
+
+body{
+    font-family: $font;
+}
+
+.wrapper{
+    max-width:$maxWidth;
+    margin:0 auto;
+}
+
+.fixed{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+}
+
+.container{
+    margin:0 $outterMargin;
+    background-color:rgba($colorWhite, $headerOpacity);
+    border-bottom: 2px solid darken($colorWhite, 2);
+
+}
+
+.content{
+    margin:0 $innerMargin;
+}
+
+// Responsive content
+@media (max-width: $contentLimitWidth - 1) {
+
+    .content div{
+        float:none;
+        width:100%;
+        height:auto;
+        text-align: center;
+        display:block;
+    }
+
+}
+
+
+
+/*
+    Header
+*/
+
+.header{
+    width:auto;
+    height:$headerHeight;
+    margin:0 $outterMargin;
+    background-color:rgba($colorWhite, $headerOpacity);
+    border-bottom: 2px solid rgba(darken($colorWhite, 2), $headerOpacity);
+}
+
+.header .logo{
+    display:block;
+    float:left;
+    width: 50px;
+    height: 30px;
+    margin: 20px 0 20px $innerMargin;
+}
+
+.header .logo a{
+    display: block;
+    width:50px;
+    height:30px;
+}
+
+.header .nav{
+    height: $navHeight;
+    margin: ($headerHeight - $navHeight)/2 $innerMargin ($headerHeight - $navHeight)/2 0;
+    float:right;
+}
+
+.header .nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+
+.header .nav ul li{
+    display:inline-block;
+    margin: 0 22px;
+    height: $navHeight;
+}
+
+.header .nav ul li a{
+    display:block;
+    width: auto;
+    height: inherit;
+    line-height: $navHeight;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    color: $colorPrimary;
+}
+
+.header .icon{
+    display:none;
+    float:right;
+    width:$navIconWidth;
+    height:$navIconHeight*5;
+    margin: ($headerHeight - $navIconHeight*5)/2 0;
+}
+
+.header .icon span{
+    display:block;
+    height:$navIconHeight;
+    cursor: pointer;
+    border-bottom: $navIconHeight*3 double $colorPrimary; 
+    border-top: $navIconHeight solid $colorPrimary; 
+}
+
+.header #show{
+    display: none;
+}
+
+//  Responsive header
+@media (min-width: $headerLimitWidth){
+
+    .header .nav ul li:first-child{
+        margin-left:0;
+    }
+    
+    .header .nav ul li:last-child{
+        margin-right:$navLastBorder;
+    }
+    
+    .header .nav ul li:last-child a{
+        padding:0 18px;
+        box-shadow: 0 0 0 $navLastBorder $colorPrimary;
+        border-radius:4px;
+    }
+    
+    .header .nav ul li:last-child:hover a{
+        background-color: $colorPrimary;
+        color:$colorWhite;
+    }
+}
+@media (max-width: $headerLimitWidth - 1) {
+    .header .nav{
+        display:none;
+    } 
+    .header #show:checked ~ nav{
+        display:block;
+    }       
+    .header .icon{
+        display:block;
+    }
+    .header .nav {
+        position: relative;
+        height:auto;
+        width:100%;
+        z-index: 1000;
+        margin: 2px 0 50px 0;
+        background-color:rgba($colorWhite, $headerOpacity);
+        border-bottom: 2px solid rgba(darken($colorWhite, 2), $headerOpacity);
+    }
+    .header .nav ul li{
+        display:block;
+        text-align:Center;
+        margin:10px 0;
+    }
+    .header .nav ul li a{
+        display:inline;
+
+    }
+}
+
+
+
+/*
+    Content
+*/
+
+//  Presentation
+.presentation > * {
+    vertical-align: middle;
+}
+
+.presentation{
+    padding-top:$headerHeight+10px;
+    white-space: nowrap;
+}
+
+.hello{
+    display: inline-block;
+    width:60%;
+    height:auto;
+    white-space: normal;
+}
+
+.avatar{
+    display: inline-block;
+    width:40%;
+}
+
+// Responsive presentation
+@media (max-width: $contentLimitWidth - 1) {
+
+    .avatar{
+        max-width: 300px;
+        margin:0 auto;
+    }
+
+}

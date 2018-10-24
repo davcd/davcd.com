@@ -1,0 +1,414 @@
+/*
+    Definition of variables
+*/
+/*
+    Reset / Common
+*/
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #222222;
+  background-color: white;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+}
+
+.container.separator {
+  border-bottom: 2px solid #fafafa;
+}
+
+.content {
+  margin: 0 2%;
+}
+
+/*
+    Header
+*/
+header {
+  width: auto;
+  height: 80px;
+  display: block;
+}
+
+header a {
+  display: block;
+  width: 50px;
+  height: 30px;
+  padding: 25px 0;
+  margin: 0 auto;
+}
+
+header a svg path {
+  fill: #222222;
+}
+
+/*
+    About
+*/
+.about {
+  white-space: nowrap;
+  font-size: 0;
+  padding: 30px 0;
+}
+
+.about > * {
+  vertical-align: middle;
+}
+
+.about .hello {
+  display: inline-block;
+  width: 65%;
+  height: auto;
+  white-space: normal;
+  margin-right: 10%;
+}
+
+.about .hello p {
+  font-size: 18px;
+}
+
+.about .hello p a {
+  color: #aaaaaa;
+  border-bottom: 1px dashed rgba(170, 170, 170, 0.4);
+}
+
+.about .hello p a:hover {
+  color: #888888;
+  border-bottom: 1px dashed rgba(136, 136, 136, 0.4);
+}
+
+.about .avatar {
+  display: inline-block;
+  width: 25%;
+  margin: 0;
+  padding: 0;
+}
+
+.about .avatar .a {
+  fill: #f0ccb2;
+}
+
+.about .avatar .b, .about .avatar .c, .about .avatar .g, .about .avatar .o, .about .avatar .p {
+  opacity: 0.45;
+}
+
+.about .avatar .b {
+  fill: url(#a);
+}
+
+.about .avatar .c {
+  fill: url(#b);
+}
+
+.about .avatar .d {
+  fill: #e4ae94;
+  opacity: 0.4;
+}
+
+.about .avatar .e, .about .avatar .q {
+  fill: #4e4359;
+}
+
+.about .avatar .e {
+  opacity: 0.2;
+}
+
+.about .avatar .f {
+  opacity: 0.5;
+  fill: url(#c);
+}
+
+.about .avatar .g {
+  fill: url(#d);
+}
+
+.about .avatar .h {
+  fill: #ffadab;
+}
+
+.about .avatar .h, .about .avatar .j, .about .avatar .r {
+  opacity: 0.75;
+}
+
+.about .avatar .i {
+  fill: #593527;
+}
+
+.about .avatar .k {
+  fill: #444444;
+}
+
+.about .avatar .l, .about .avatar .o, .about .avatar .r {
+  fill: #ab887a;
+}
+
+.about .avatar .m {
+  fill: url(#e);
+}
+
+.about .avatar .n {
+  fill: url(#f);
+}
+
+.about .avatar .p {
+  fill: url(#g);
+}
+
+@media (max-width: 799px) {
+  .about .hello {
+    float: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: block;
+  }
+  .about .avatar {
+    float: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/*
+    Contact
+*/
+.contact {
+  width: 80%;
+  max-width: 550px;
+  margin: 60px auto 30px auto;
+}
+
+.contact a {
+  text-decoration: none;
+  display: block;
+}
+
+.contact .scheme svg {
+  font-size: 100px;
+  line-height: 100px;
+}
+
+.contact .scheme svg text {
+  -webkit-transition-delay: 40ms;
+  transition-delay: 40ms;
+}
+
+.contact .scheme .text {
+  height: auto;
+  position: relative;
+}
+
+.contact .scheme .text.email {
+  width: 99%;
+  margin-left: 0.5%;
+}
+
+.contact .scheme .text.web {
+  margin-top: 4%;
+  width: 59.75%;
+  margin-left: 39.75%;
+}
+
+.contact .scheme .text.social {
+  width: 44.5%;
+  margin-left: 27.75%;
+}
+
+.contact .scheme .text p {
+  color: rgba(170, 170, 170, 0.6);
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  -webkit-transition-delay: 40ms;
+  transition-delay: 40ms;
+}
+
+.contact .scheme .text .bracket {
+  width: 100%;
+  height: 4px;
+  border: 2px solid #dddddd;
+  -webkit-transition-delay: 40ms;
+  transition-delay: 40ms;
+}
+
+.contact .scheme .text:hover .bracket, .contact .scheme .text.hover .bracket {
+  border: 2px solid #aaaaaa;
+}
+
+.contact .scheme .text:hover p, .contact .scheme .text.hover p {
+  color: rgba(34, 34, 34, 0.6);
+}
+
+.contact .scheme .text.bottom .bracket {
+  border-top: none;
+}
+
+.contact .scheme .text.top .bracket {
+  border-bottom: none;
+}
+
+.contact .scheme .text.bottom p {
+  margin-top: 4px;
+}
+
+.contact .scheme .text.top p {
+  margin-bottom: 10px;
+}
+
+.contact .links {
+  text-align: center;
+  margin: 70px auto 0 auto;
+  font-size: 0;
+  width: 100%;
+  max-width: 350px;
+}
+
+.contact .links span {
+  display: inline-block;
+  position: relative;
+  margin: 0 3.2%;
+  width: 7.5%;
+  padding-top: 7.5%;
+}
+
+.contact .links span svg {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.contact .links span svg path,
+.contact .links span svg circle,
+.contact .links span svg text {
+  fill: #aaaaaa;
+  fill-rule: evenodd;
+  -webkit-transition-delay: 40ms;
+  transition-delay: 40ms;
+}
+
+.contact .links span svg .white {
+  fill: white;
+}
+
+.contact .links span.linkedin {
+  padding-left: 0%;
+}
+
+.contact .links span.linkedin:hover path {
+  fill: #0077B5;
+}
+
+.contact .links span.github {
+  padding-left: 0.1905%;
+}
+
+.contact .links span.github:hover path {
+  fill: #1E1D16;
+}
+
+.contact .links span.stackoverflow {
+  margin-right: 2.03075%;
+}
+
+.contact .links span.stackoverflow:hover .gray {
+  fill: #bcbbbb;
+}
+
+.contact .links span.stackoverflow:hover .orange {
+  fill: #f48023;
+}
+
+.contact .links span.medium {
+  padding-left: 1.947%;
+}
+
+.contact .links span.medium:hover path {
+  fill: #1C1B1A;
+}
+
+.contact .links span.twitter {
+  padding-left: 1.7295%;
+}
+
+.contact .links span.twitter:hover path {
+  fill: #1DA1F2;
+}
+
+.contact .links span.instagram {
+  padding-left: 0%;
+}
+
+.contact .links span.instagram:hover path,
+.contact .links span.instagram:hover circle {
+  fill: #d6249f;
+  fill: url(#instagram-gradient);
+}
+
+.contact .links span.telegram {
+  padding-left: 0%;
+}
+
+.contact .links span.telegram:hover circle {
+  fill: #2ca5e0;
+}
+
+.contact .links:hover span svg path,
+.contact .links:hover span svg circle,
+.contact .links:hover span svg text,
+.contact .links.hover span svg path,
+.contact .links.hover span svg circle,
+.contact .links.hover span svg text {
+  fill: #888888;
+  fill-rule: evenodd;
+}
+
+.contact .links:hover span svg .white,
+.contact .links.hover span svg .white {
+  fill: white;
+}
+
+@media (max-width: 709px) {
+  .contact .scheme .text p {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -89,7 +89,7 @@ header a svg path {
 
 .about .hello {
   display: inline-block;
-  width: 65%;
+  width: 70%;
   height: auto;
   white-space: normal;
   margin-right: 10%;
@@ -111,7 +111,7 @@ header a svg path {
 
 .about .avatar {
   display: inline-block;
-  width: 25%;
+  width: 20%;
   margin: 0;
   padding: 0;
 }
@@ -120,7 +120,11 @@ header a svg path {
   fill: #f0ccb2;
 }
 
-.about .avatar .b, .about .avatar .c, .about .avatar .g, .about .avatar .o, .about .avatar .p {
+.about .avatar .b,
+.about .avatar .c,
+.about .avatar .g,
+.about .avatar .o,
+.about .avatar .p {
   opacity: 0.45;
 }
 
@@ -137,7 +141,8 @@ header a svg path {
   opacity: 0.4;
 }
 
-.about .avatar .e, .about .avatar .q {
+.about .avatar .e,
+.about .avatar .q {
   fill: #4e4359;
 }
 
@@ -158,7 +163,9 @@ header a svg path {
   fill: #ffadab;
 }
 
-.about .avatar .h, .about .avatar .j, .about .avatar .r {
+.about .avatar .h,
+.about .avatar .j,
+.about .avatar .r {
   opacity: 0.75;
 }
 
@@ -170,7 +177,9 @@ header a svg path {
   fill: #444444;
 }
 
-.about .avatar .l, .about .avatar .o, .about .avatar .r {
+.about .avatar .l,
+.about .avatar .o,
+.about .avatar .r {
   fill: #ab887a;
 }
 

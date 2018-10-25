@@ -80,14 +80,14 @@ header a svg path {
 .about {
   white-space: nowrap;
   font-size: 0;
-  padding: 30px 0;
+  padding: 40px 0;
 }
 
 .about > * {
   vertical-align: middle;
 }
 
-.about .hello {
+.hello {
   display: inline-block;
   width: 70%;
   height: auto;
@@ -95,126 +95,126 @@ header a svg path {
   margin-right: 10%;
 }
 
-.about .hello p {
+.hello p {
   font-size: 18px;
 }
 
-.about .hello p a {
+.hello p a {
   color: #aaaaaa;
   border-bottom: 1px dashed rgba(170, 170, 170, 0.4);
 }
 
-.about .hello p a:hover {
+.hello p a:hover {
   color: #888888;
   border-bottom: 1px dashed rgba(136, 136, 136, 0.4);
 }
 
-.about .hello p.margin {
+.hello p.margin {
   margin-top: 30px;
 }
 
-.about .avatar {
+.avatar {
   display: inline-block;
   width: 20%;
   margin: 0;
   padding: 0;
 }
 
-.about .avatar .b,
-.about .avatar .c,
-.about .avatar .g,
-.about .avatar .o,
-.about .avatar .p {
+.avatar .b,
+.avatar .c,
+.avatar .g,
+.avatar .o,
+.avatar .p {
   opacity: 0.45;
 }
 
-.about .avatar .h,
-.about .avatar .j,
-.about .avatar .r {
+.avatar .h,
+.avatar .j,
+.avatar .r {
   opacity: 0.75;
 }
 
-.about .avatar .e {
+.avatar .e {
   opacity: 0.2;
 }
 
-.about .avatar .l,
-.about .avatar .o,
-.about .avatar .r {
+.avatar .l,
+.avatar .o,
+.avatar .r {
   fill: #ab887a;
 }
 
-.about .avatar .a {
+.avatar .a {
   fill: #f0ccb2;
 }
 
-.about .avatar .e,
-.about .avatar .q {
+.avatar .e,
+.avatar .q {
   fill: #4e4359;
 }
 
-.about .avatar .h {
+.avatar .h {
   fill: #ffadab;
 }
 
-.about .avatar .i {
+.avatar .i {
   fill: #593527;
 }
 
-.about .avatar .k {
+.avatar .k {
   fill: #444444;
 }
 
-.about .avatar .d {
+.avatar .d {
   opacity: 0.4;
   fill: #e4ae94;
 }
 
-.about .avatar .m {
+.avatar .m {
   fill: url(#e);
 }
 
-.about .avatar .n {
+.avatar .n {
   fill: url(#f);
 }
 
-.about .avatar .p {
+.avatar .p {
   fill: url(#g);
 }
 
-.about .avatar .b {
+.avatar .b {
   fill: url(#a);
 }
 
-.about .avatar .c {
+.avatar .c {
   fill: url(#b);
 }
 
-.about .avatar .g {
+.avatar .g {
   fill: url(#d);
 }
 
-.about .avatar .f {
+.avatar .f {
   opacity: 0.5;
   fill: url(#c);
 }
 
 @media (max-width: 799px) {
-  .about .hello {
+  .hello {
     float: none;
     width: 100%;
     height: auto;
     text-align: center;
     display: block;
   }
-  .about .avatar {
+  .avatar {
     float: none;
     width: 100%;
     height: auto;
     text-align: center;
     display: block;
-    max-width: 300px;
-    margin: 0 auto;
+    max-width: 200px;
+    margin: 40px auto 0 auto;
   }
 }
 
@@ -224,7 +224,7 @@ header a svg path {
 .contact {
   width: 80%;
   max-width: 550px;
-  margin: 60px auto 30px auto;
+  margin: 40px auto 30px auto;
 }
 
 .contact a {
@@ -232,38 +232,38 @@ header a svg path {
   display: block;
 }
 
-.contact .scheme svg {
+.scheme svg {
   font-size: 100px;
   line-height: 100px;
 }
 
-.contact .scheme svg text {
+.scheme svg text {
   -webkit-transition-delay: 40ms;
   transition-delay: 40ms;
 }
 
-.contact .scheme .text {
+.scheme .text {
   height: auto;
   position: relative;
 }
 
-.contact .scheme .text.email {
+.scheme .text.email {
   width: 99%;
   margin-left: 0.5%;
 }
 
-.contact .scheme .text.web {
+.scheme .text.web {
   margin-top: 4%;
   width: 59.75%;
   margin-left: 39.75%;
 }
 
-.contact .scheme .text.social {
+.scheme .text.social {
   width: 44.5%;
   margin-left: 27.75%;
 }
 
-.contact .scheme .text p {
+.scheme .text p {
   color: rgba(170, 170, 170, 0.6);
   font-size: 18px;
   text-align: center;
@@ -272,7 +272,7 @@ header a svg path {
   transition-delay: 40ms;
 }
 
-.contact .scheme .text .bracket {
+.scheme .text .bracket {
   width: 100%;
   height: 4px;
   border: 2px solid #dddddd;
@@ -280,31 +280,31 @@ header a svg path {
   transition-delay: 40ms;
 }
 
-.contact .scheme .text:hover .bracket, .contact .scheme .text.hover .bracket {
+.scheme .text:hover .bracket, .scheme .text.hover .bracket {
   border: 2px solid #aaaaaa;
 }
 
-.contact .scheme .text:hover p, .contact .scheme .text.hover p {
+.scheme .text:hover p, .scheme .text.hover p {
   color: rgba(34, 34, 34, 0.6);
 }
 
-.contact .scheme .text.bottom .bracket {
+.scheme .text.bottom .bracket {
   border-top: none;
 }
 
-.contact .scheme .text.top .bracket {
+.scheme .text.top .bracket {
   border-bottom: none;
 }
 
-.contact .scheme .text.bottom p {
+.scheme .text.bottom p {
   margin-top: 4px;
 }
 
-.contact .scheme .text.top p {
+.scheme .text.top p {
   margin-bottom: 10px;
 }
 
-.contact .links {
+.links {
   text-align: center;
   margin: 70px auto 0 auto;
   font-size: 0;
@@ -312,7 +312,7 @@ header a svg path {
   max-width: 350px;
 }
 
-.contact .links span {
+.links span {
   display: inline-block;
   position: relative;
   margin: 0 3.2%;
@@ -320,7 +320,7 @@ header a svg path {
   padding-top: 7.5%;
 }
 
-.contact .links span svg {
+.links span svg {
   position: absolute;
   height: 100%;
   top: 0;
@@ -329,98 +329,98 @@ header a svg path {
   right: 0;
 }
 
-.contact .links span svg path,
-.contact .links span svg circle,
-.contact .links span svg text {
+.links span svg path,
+.links span svg circle,
+.links span svg text {
   fill: #aaaaaa;
   fill-rule: evenodd;
   -webkit-transition-delay: 40ms;
   transition-delay: 40ms;
 }
 
-.contact .links span svg .white {
+.links span svg .white {
   fill: white;
 }
 
-.contact .links span.linkedin {
+.links span.linkedin {
   padding-left: 0%;
 }
 
-.contact .links span.linkedin:hover path {
+.links span.linkedin:hover path {
   fill: #0077B5;
 }
 
-.contact .links span.github {
+.links span.github {
   padding-left: 0.1905%;
 }
 
-.contact .links span.github:hover path {
+.links span.github:hover path {
   fill: #1E1D16;
 }
 
-.contact .links span.stackoverflow {
+.links span.stackoverflow {
   margin-right: 2.03075%;
 }
 
-.contact .links span.stackoverflow:hover .gray {
+.links span.stackoverflow:hover .gray {
   fill: #bcbbbb;
 }
 
-.contact .links span.stackoverflow:hover .orange {
+.links span.stackoverflow:hover .orange {
   fill: #f48023;
 }
 
-.contact .links span.medium {
+.links span.medium {
   padding-left: 1.947%;
 }
 
-.contact .links span.medium:hover path {
+.links span.medium:hover path {
   fill: #1C1B1A;
 }
 
-.contact .links span.twitter {
+.links span.twitter {
   padding-left: 1.7295%;
 }
 
-.contact .links span.twitter:hover path {
+.links span.twitter:hover path {
   fill: #1DA1F2;
 }
 
-.contact .links span.instagram {
+.links span.instagram {
   padding-left: 0%;
 }
 
-.contact .links span.instagram:hover path,
-.contact .links span.instagram:hover circle {
+.links span.instagram:hover path,
+.links span.instagram:hover circle {
   fill: #d6249f;
   fill: url(#instagram-gradient);
 }
 
-.contact .links span.telegram {
+.links span.telegram {
   padding-left: 0%;
 }
 
-.contact .links span.telegram:hover circle {
+.links span.telegram:hover circle {
   fill: #2ca5e0;
 }
 
-.contact .links:hover span svg path,
-.contact .links:hover span svg circle,
-.contact .links:hover span svg text,
-.contact .links.hover span svg path,
-.contact .links.hover span svg circle,
-.contact .links.hover span svg text {
+.links:hover span svg path,
+.links:hover span svg circle,
+.links:hover span svg text,
+.links.hover span svg path,
+.links.hover span svg circle,
+.links.hover span svg text {
   fill: #888888;
   fill-rule: evenodd;
 }
 
-.contact .links:hover span svg .white,
-.contact .links.hover span svg .white {
+.links:hover span svg .white,
+.links.hover span svg .white {
   fill: white;
 }
 
 @media (max-width: 709px) {
-  .contact .scheme .text p {
+  .scheme .text p {
     font-size: 14px;
   }
 }

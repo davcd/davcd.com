@@ -144,143 +144,140 @@ header{
 .about{
     white-space: nowrap;
     font-size: 0;
-    padding:30px 0;
+    padding:40px 0;
 
     > * {
         vertical-align: middle;
     }
-
-    .hello{
-        display: inline-block;
-        width:70%;
-        height:auto;
-        white-space: normal;
-        margin-right:10%;
-
-        p{
-            font-size:18px;
-
-            a{
-                color: $colorLight;
-                border-bottom: 1px dashed rgba($colorLight, 0.4);
-
-                &:hover{
-                    color: $colorMedium;
-                    border-bottom: 1px dashed rgba($colorMedium, 0.4);
-                }
-            }
-
-            &.margin{
-                margin-top:30px;
-            }
-
-        }
-    }
-
-    .avatar{
-        display: inline-block;
-        width:20%;
-        margin:0;
-        padding:0;
-
-        .b,
-        .c,
-        .g,
-        .o,
-        .p{
-            opacity:0.45;
-        }
-
-        .h,
-        .j,
-        .r{
-            opacity:0.75;
-        }
-
-        .e{
-            opacity:0.2;
-        }
-
-        .l,
-        .o,
-        .r{
-            fill:#ab887a;
-        }
-
-        .a{
-            fill:#f0ccb2;
-        }
-
-        .e,
-        .q{
-            fill:#4e4359;
-        }
-
-        .h{
-            fill:#ffadab;
-        }
-
-        .i{
-            fill:#593527;
-        }
-
-        .k{
-            fill:#444444;
-        }
-
-        .d{
-            opacity:0.4;
-            fill:#e4ae94;
-        }
-
-        .m{
-            fill:url(#e);
-        }
-
-        .n{
-            fill:url(#f);
-        }
-
-        .p{
-            fill:url(#g);
-        }
-
-        .b{
-            fill:url(#a);
-        }
-
-        .c{
-            fill:url(#b);
-        }
-
-        .g{
-            fill:url(#d);
-        }
-
-        .f{
-            opacity:0.5;
-            fill:url(#c);
-        }
-    }
-
 }
+
+.hello{
+    display: inline-block;
+    width:70%;
+    height:auto;
+    white-space: normal;
+    margin-right:10%;
+
+    p{
+        font-size:18px;
+
+        a{
+            color: $colorLight;
+            border-bottom: 1px dashed rgba($colorLight, 0.4);
+
+            &:hover{
+                color: $colorMedium;
+                border-bottom: 1px dashed rgba($colorMedium, 0.4);
+            }
+        }
+
+        &.margin{
+            margin-top:30px;
+        }
+
+    }
+}
+
+.avatar{
+    display: inline-block;
+    width:20%;
+    margin:0;
+    padding:0;
+
+    .b,
+    .c,
+    .g,
+    .o,
+    .p{
+        opacity:0.45;
+    }
+
+    .h,
+    .j,
+    .r{
+        opacity:0.75;
+    }
+
+    .e{
+        opacity:0.2;
+    }
+
+    .l,
+    .o,
+    .r{
+        fill:#ab887a;
+    }
+
+    .a{
+        fill:#f0ccb2;
+    }
+
+    .e,
+    .q{
+        fill:#4e4359;
+    }
+
+    .h{
+        fill:#ffadab;
+    }
+
+    .i{
+        fill:#593527;
+    }
+
+    .k{
+        fill:#444444;
+    }
+
+    .d{
+        opacity:0.4;
+        fill:#e4ae94;
+    }
+
+    .m{
+        fill:url(#e);
+    }
+
+    .n{
+        fill:url(#f);
+    }
+
+    .p{
+        fill:url(#g);
+    }
+
+    .b{
+        fill:url(#a);
+    }
+
+    .c{
+        fill:url(#b);
+    }
+
+    .g{
+        fill:url(#d);
+    }
+
+    .f{
+        opacity:0.5;
+        fill:url(#c);
+    }
+}
+
+
 
 // Responsive about
 @media (max-width: $mediumLimitWidth - 1) {
 
-    .about {
-    
-        .hello{
-            @include content-responsive;
-        }
-
-        .avatar{
-            @include content-responsive;
-            max-width: 300px;
-            margin:0 auto;
-        }
+    .hello{
+        @include content-responsive;
     }
 
+    .avatar{
+        @include content-responsive;
+        max-width: 200px;
+        margin:40px auto 0 auto;
+    }
 }
 
 /*
@@ -290,212 +287,215 @@ header{
 .contact{
     width: 80%;
     max-width: 550px;
-    margin: 60px auto 30px auto;
+    margin: 40px auto 30px auto;
 
     a{
         text-decoration: none;
         display:block;
     }
 
-    .scheme{
+}
 
-        svg{
-            font-size: 100px;
-            line-height: 100px;
+
+.scheme{
+
+    svg{
+        font-size: 100px;
+        line-height: 100px;
+    }
+
+    svg text{
+        @include transition-display;
+    }
+
+    .text{
+        height: auto;
+        position: relative;
+
+        &.email{
+            width: 99%;
+            margin-left:0.5%;
         }
     
-        svg text{
+        &.web{
+            margin-top:4%;
+            width: 59.75%;
+            margin-left:39.75%;
+        }
+    
+        &.social{
+            width: 44.5%;
+            margin-left:27.75%;
+        }
+
+        p{
+            color:rgba($colorLight, 0.6);
+            font-size: 18px;
+            text-align: center;
+            margin:0;
             @include transition-display;
         }
 
-        .text{
-            height: auto;
-            position: relative;
+        .bracket{
+            width: 100%;
+            height:4px;
+            border: 2px solid $colorVeryLight;
+            @include transition-display;
+        }
 
-            &.email{
-                width: 99%;
-                margin-left:0.5%;
-            }
-        
-            &.web{
-                margin-top:4%;
-                width: 59.75%;
-                margin-left:39.75%;
-            }
-        
-            &.social{
-                width: 44.5%;
-                margin-left:27.75%;
-            }
-
-            p{
-                color:rgba($colorLight, 0.6);
-                font-size: 18px;
-                text-align: center;
-                margin:0;
-                @include transition-display;
-            }
+        &:hover,
+        &.hover{
 
             .bracket{
-                width: 100%;
-                height:4px;
-                border: 2px solid $colorVeryLight;
-                @include transition-display;
+                border: 2px solid $colorLight;
             }
-
-            &:hover,
-            &.hover{
-
-                .bracket{
-                    border: 2px solid $colorLight;
-                }
-                
-                p{
-                    color:rgba($colorVeryDark, 0.6);
-                }
-            }
-
-            &.bottom .bracket{
-                border-top: none;
-            }
-        
-            &.top .bracket{
-                border-bottom: none;
-            }
-
-            &.bottom p{
-                margin-top:4px;
-            }
-        
-            &.top p{
-                margin-bottom:10px;
+            
+            p{
+                color:rgba($colorVeryDark, 0.6);
             }
         }
+
+        &.bottom .bracket{
+            border-top: none;
+        }
+    
+        &.top .bracket{
+            border-bottom: none;
+        }
+
+        &.bottom p{
+            margin-top:4px;
+        }
+    
+        &.top p{
+            margin-bottom:10px;
+        }
     }
+}
 
-    .links{
-        text-align: center;
-        margin: 70px auto 0 auto;
-        font-size: 0;
-        width: 100%;
-        max-width: 350px;
+.links{
+    text-align: center;
+    margin: 70px auto 0 auto;
+    font-size: 0;
+    width: 100%;
+    max-width: 350px;
 
-        span{
-            display: inline-block;
-            position: relative;
-            margin:0 $socialLinksMargin * 1%;
-            width:$socialLinksWidth * 1%;
-            padding-top: $socialLinksWidth * 1%;
+    span{
+        display: inline-block;
+        position: relative;
+        margin:0 $socialLinksMargin * 1%;
+        width:$socialLinksWidth * 1%;
+        padding-top: $socialLinksWidth * 1%;
 
-            svg{
-                position: absolute;
-                height: 100%;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-
-                path,
-                circle,
-                text{
-                    fill:$colorLight;
-                    fill-rule:evenodd;
-                    @include transition-display;
-                }   
-
-                .white{
-                    fill:white;
-                }        
-            }
-
-
-            &.linkedin{
-                padding-left:($linkedinIconRatio * $socialLinksWidth - $socialLinksWidth) * 1%;        
-                
-                &:hover path{
-                    fill:#0077B5;
-                }
-            }
-
-            &.github{
-                padding-left:($githubIconRatio * $socialLinksWidth - $socialLinksWidth) * 1%;
-            
-                &:hover path{
-                    fill:#1E1D16;
-                }
-            }
-
-            &.stackoverflow{
-                margin-right:$socialLinksMargin+($stackoverflowIconRatio * $socialLinksWidth - $socialLinksWidth) * 1%;
-            
-                &:hover {
-                    .gray{
-                        fill:#bcbbbb;
-                    }
-                    .orange{
-                        fill:#f48023;
-                    }  
-                }
-            }
-
-            &.medium{
-                padding-left:($mediumIconRatio * $socialLinksWidth - $socialLinksWidth) * 1%;
-            
-                &:hover path{
-                    fill:#1C1B1A;
-                }
-            }
-            
-            &.twitter{
-                padding-left:($twitterIconRatio * $socialLinksWidth - $socialLinksWidth) * 1%;            
-            
-                &:hover path{
-                    fill:#1DA1F2;           
-                }
-            }
-
-            &.instagram{
-                padding-left:($instagramIconRatio * $socialLinksWidth - $socialLinksWidth) * 1%;
-            
-                &:hover {
-
-                    path,
-                    circle{
-                        fill:#d6249f;
-                        fill:url(#instagram-gradient);
-                    } 
-                }
-            }
-
-            &.telegram{
-                padding-left:($telegramIconRatio * $socialLinksWidth - $socialLinksWidth) * 1%;
-                &:hover circle{
-                    fill:#2ca5e0;
-                }
-            } 
-        } 
-
-        &:hover span svg,
-        &.hover span svg,
-        {
+        svg{
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
 
             path,
             circle,
             text{
-                fill:$colorMedium;
+                fill:$colorLight;
                 fill-rule:evenodd;
-            } 
+                @include transition-display;
+            }   
+
             .white{
                 fill:white;
+            }        
+        }
+
+
+        &.linkedin{
+            padding-left:($linkedinIconRatio * $socialLinksWidth - $socialLinksWidth) * 1%;        
+            
+            &:hover path{
+                fill:#0077B5;
             }
         }
-    }     
-}
+
+        &.github{
+            padding-left:($githubIconRatio * $socialLinksWidth - $socialLinksWidth) * 1%;
+        
+            &:hover path{
+                fill:#1E1D16;
+            }
+        }
+
+        &.stackoverflow{
+            margin-right:$socialLinksMargin+($stackoverflowIconRatio * $socialLinksWidth - $socialLinksWidth) * 1%;
+        
+            &:hover {
+                .gray{
+                    fill:#bcbbbb;
+                }
+                .orange{
+                    fill:#f48023;
+                }  
+            }
+        }
+
+        &.medium{
+            padding-left:($mediumIconRatio * $socialLinksWidth - $socialLinksWidth) * 1%;
+        
+            &:hover path{
+                fill:#1C1B1A;
+            }
+        }
+        
+        &.twitter{
+            padding-left:($twitterIconRatio * $socialLinksWidth - $socialLinksWidth) * 1%;            
+        
+            &:hover path{
+                fill:#1DA1F2;           
+            }
+        }
+
+        &.instagram{
+            padding-left:($instagramIconRatio * $socialLinksWidth - $socialLinksWidth) * 1%;
+        
+            &:hover {
+
+                path,
+                circle{
+                    fill:#d6249f;
+                    fill:url(#instagram-gradient);
+                } 
+            }
+        }
+
+        &.telegram{
+            padding-left:($telegramIconRatio * $socialLinksWidth - $socialLinksWidth) * 1%;
+            &:hover circle{
+                fill:#2ca5e0;
+            }
+        } 
+    } 
+
+    &:hover span svg,
+    &.hover span svg,
+    {
+
+        path,
+        circle,
+        text{
+            fill:$colorMedium;
+            fill-rule:evenodd;
+        } 
+        .white{
+            fill:white;
+        }
+    }
+}     
+
 
 //  Responsive contact
 @media (max-width: $smallLimitWidth - 1) {
 
-    .contact .scheme .text p{
+    .scheme .text p{
         font-size: 14px;
     }
 }

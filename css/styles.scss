@@ -15,7 +15,7 @@ $colorVeryLight: #dddddd;
 
 
 //  positioning
-$maxWidth:1600px;
+$maxWidth:1400px;
 $innerMargin:2%;
 $outterMargin:5%;
 
@@ -169,6 +169,11 @@ header{
                     border-bottom: 1px dashed rgba($colorMedium, 0.4);
                 }
             }
+
+            &.margin{
+                margin-top:30px;
+            }
+
         }
     }
 
@@ -178,10 +183,6 @@ header{
         margin:0;
         padding:0;
 
-        .a{
-            fill:#f0ccb2;
-        }
-
         .b,
         .c,
         .g,
@@ -190,16 +191,24 @@ header{
             opacity:0.45;
         }
 
-        .b{
-            fill:url(#a);
+        .h,
+        .j,
+        .r{
+            opacity:0.75;
         }
 
-        .c{
-            fill:url(#b);
+        .e{
+            opacity:0.2;
         }
 
-        .d{
-            fill:#e4ae94;opacity:0.4;
+        .l,
+        .o,
+        .r{
+            fill:#ab887a;
+        }
+
+        .a{
+            fill:#f0ccb2;
         }
 
         .e,
@@ -207,26 +216,8 @@ header{
             fill:#4e4359;
         }
 
-        .e{
-            opacity:0.2;
-        }
-
-        .f{
-            opacity:0.5;fill:url(#c);
-        }
-
-        .g{
-            fill:url(#d);
-        }
-
         .h{
             fill:#ffadab;
-        }
-
-        .h,
-        .j,
-        .r{
-            opacity:0.75;
         }
 
         .i{
@@ -237,10 +228,9 @@ header{
             fill:#444444;
         }
 
-        .l,
-        .o,
-        .r{
-            fill:#ab887a;
+        .d{
+            opacity:0.4;
+            fill:#e4ae94;
         }
 
         .m{
@@ -253,6 +243,23 @@ header{
 
         .p{
             fill:url(#g);
+        }
+
+        .b{
+            fill:url(#a);
+        }
+
+        .c{
+            fill:url(#b);
+        }
+
+        .g{
+            fill:url(#d);
+        }
+
+        .f{
+            opacity:0.5;
+            fill:url(#c);
         }
     }
 

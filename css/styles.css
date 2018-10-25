@@ -35,7 +35,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -109,15 +109,15 @@ header a svg path {
   border-bottom: 1px dashed rgba(136, 136, 136, 0.4);
 }
 
+.about .hello p.margin {
+  margin-top: 30px;
+}
+
 .about .avatar {
   display: inline-block;
   width: 20%;
   margin: 0;
   padding: 0;
-}
-
-.about .avatar .a {
-  fill: #f0ccb2;
 }
 
 .about .avatar .b,
@@ -128,17 +128,24 @@ header a svg path {
   opacity: 0.45;
 }
 
-.about .avatar .b {
-  fill: url(#a);
+.about .avatar .h,
+.about .avatar .j,
+.about .avatar .r {
+  opacity: 0.75;
 }
 
-.about .avatar .c {
-  fill: url(#b);
+.about .avatar .e {
+  opacity: 0.2;
 }
 
-.about .avatar .d {
-  fill: #e4ae94;
-  opacity: 0.4;
+.about .avatar .l,
+.about .avatar .o,
+.about .avatar .r {
+  fill: #ab887a;
+}
+
+.about .avatar .a {
+  fill: #f0ccb2;
 }
 
 .about .avatar .e,
@@ -146,27 +153,8 @@ header a svg path {
   fill: #4e4359;
 }
 
-.about .avatar .e {
-  opacity: 0.2;
-}
-
-.about .avatar .f {
-  opacity: 0.5;
-  fill: url(#c);
-}
-
-.about .avatar .g {
-  fill: url(#d);
-}
-
 .about .avatar .h {
   fill: #ffadab;
-}
-
-.about .avatar .h,
-.about .avatar .j,
-.about .avatar .r {
-  opacity: 0.75;
 }
 
 .about .avatar .i {
@@ -177,10 +165,9 @@ header a svg path {
   fill: #444444;
 }
 
-.about .avatar .l,
-.about .avatar .o,
-.about .avatar .r {
-  fill: #ab887a;
+.about .avatar .d {
+  opacity: 0.4;
+  fill: #e4ae94;
 }
 
 .about .avatar .m {
@@ -193,6 +180,23 @@ header a svg path {
 
 .about .avatar .p {
   fill: url(#g);
+}
+
+.about .avatar .b {
+  fill: url(#a);
+}
+
+.about .avatar .c {
+  fill: url(#b);
+}
+
+.about .avatar .g {
+  fill: url(#d);
+}
+
+.about .avatar .f {
+  opacity: 0.5;
+  fill: url(#c);
 }
 
 @media (max-width: 799px) {

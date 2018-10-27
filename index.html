@@ -14,12 +14,12 @@
     <meta name="twitter:site" content="@davcd_" />
     <meta name="twitter:title" content="David Carvajal | Personal website" />
     <meta name="twitter:description" content="Personal page of David Carvajal (@davcd), an IT enthusiast who currently works as a software developer." />
-    <meta name="twitter:image" content="/img/favicon-270.png" />
+    <meta name="twitter:image" content="https://davcd.com/img/favicon-270.png" />
 
     <meta property="og:title" content="David Carvajal | Personal website" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://davcd.com/" />
-    <meta property="og:image" content="/img/favicon-270.png" />
+    <meta property="og:image" content="https://davcd.com/img/favicon-270.png" />
     <meta property="og:description" content="Personal page of David Carvajal (@davcd), an IT enthusiast who currently works as a software developer." /> 
     <meta property="og:site_name" content="davcd.com" />
 
@@ -28,7 +28,7 @@
     <link rel="apple-touch-icon-precomposed" href="/img/favicon-180.png" />
     <meta name="msapplication-TileImage" content="/img/favicon-270.png" />
 
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
 </head>
 
@@ -129,24 +129,22 @@
                 <div class="contact">
                     <div class="scheme">
                         <div class="text top email">
-                            <a href="mailto:hello&#64;davcd.com">
-                                <div>
-                                    <p>email</p>
-                                </div>
-                                <div class="bracket"></div>
-                            </a>
+                            <div>
+                                <p>email</p>
+                            </div>
+                            <div class="bracket"></div>
                         </div>
                         <div class="text top web" onmouseover="moverWeb()" onmouseleave="resetEmail()">
-                            <a href="https://davcd.com/">
-                                <div>
-                                    <p>web</p>
-                                </div>
-                                <div class="bracket"></div>
-                            </a>
-                        </div>                        
-                        <svg id="email" viewBox="0 0 787 148" onclick="selectEmail();" ontouchstart="selectEmail();">
-                            <text x="0" y="100"><tspan id="hello">hello</tspan><tspan id="at">&#64;</tspan><tspan>davcd</tspan><tspan id="dotcom">.com</tspan></text>
-                        </svg>
+                            <div>
+                                <p>web</p>
+                            </div>
+                            <div class="bracket"></div>
+                        </div>      
+                        <a href="mailto:hello&#64;davcd.com">               
+                            <svg id="email" viewBox="0 0 787 148" >
+                                <text x="0" y="100"><tspan id="hello">hello</tspan><tspan id="at">&#64;</tspan><tspan>davcd</tspan><tspan id="dotcom">.com</tspan></text>
+                            </svg>
+                        </a>
                         <div id="social" class="text bottom social" onmouseover="moverSocial()" onmouseleave="resetEmail()">
                             <div class="bracket"></div>
                             <div>
@@ -276,20 +274,6 @@ function moutLink(){
     dotcom.style.fill=('#222222');
 }
 
-function selectEmail(){
-    var email = document.getElementById('email');
-    if (document.body.createTextRange) {
-        const range = document.body.createTextRange();
-        range.moveToElementText(email);
-        range.select();
-    } else if (window.getSelection) {
-        const selection = window.getSelection();
-        const range = document.createRange();
-        range.selectNodeContents(email);
-        selection.removeAllRanges();
-        selection.addRange(range);
-    }    
-}
 </script>
 
 </body>

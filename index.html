@@ -14,21 +14,21 @@
     <meta name="twitter:site" content="@davcd_" />
     <meta name="twitter:title" content="David Carvajal | Personal website" />
     <meta name="twitter:description" content="Personal page of David Carvajal (@davcd), an IT enthusiast who currently works as a software developer." />
-    <meta name="twitter:image" content="https://davcd.com/img/favicon-270.png" />
+    <meta name="twitter:image" content="/img/favicon-270.png" />
 
     <meta property="og:title" content="David Carvajal | Personal website" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://davcd.com/" />
-    <meta property="og:image" content="https://davcd.com/img/favicon-270.png" />
+    <meta property="og:image" content="/img/favicon-270.png" />
     <meta property="og:description" content="Personal page of David Carvajal (@davcd), an IT enthusiast who currently works as a software developer." /> 
     <meta property="og:site_name" content="davcd.com" />
 
-    <link rel="icon" href="img/favicon-32.png" sizes="32x32" />
-    <link rel="icon" href="img/favicon-192.png" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="img/favicon-180.png" />
-    <meta name="msapplication-TileImage" content="img/favicon-270.png" />
+    <link rel="icon" href="/img/favicon-32.png" sizes="32x32" />
+    <link rel="icon" href="/img/favicon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="/img/favicon-180.png" />
+    <meta name="msapplication-TileImage" content="/img/favicon-270.png" />
 
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
 </head>
 
@@ -39,8 +39,9 @@
         <div class="container separator">
             <div class="content">
                 <header>
-                    <a href="https://davcd.com">
+                    <a href="https://davcd.com/">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
+                            <title>davcd Logo</title>
                             <path d="M407.93,600H300C134.31,600,0,465.69,0,300,0,151.93,107.27,28.91,248.35,4.44l29.82,111.31C183.89,124.26,110,203.5,110,300c0,102.17,82.83,185,185,185,1.67,0,3.34,0,5-.07V485h77.11Z"/>
                             <path d="M1000,300c0,144-101.41,264.25-236.7,293.3L733.47,482C819.66,466.23,885,390.74,885,300c0-102.17-82.83-185-185-185H516.08l99.14,370L646,600H527L496.17,485,397,115,366.22,0H700C865.69,0,1000,134.31,1000,300Z"/>
                         </svg>
@@ -56,10 +57,11 @@
                         <h1>Hello world, my name is David Carvajal!</h1>
                         <p class="margin">I am an IT enthusiast who currently works as a Software Developer</p>
                         <p>I live in constant learning, I enjoy to acquire new abilities and put myself to the test.</p>
-                        <p class="margin">Meet my <a href="https://www.linkedin.com/in/davcd/" target="_blank">skills</a>, know more <a href="https://www.instagram.com/davcd/" target="_blank">about</a> me, take a look at my <a href="https://github.com/davcd" target="_blank">code</a>, check my <a href="https://twitter.com/davcd_" target="_blank">tweets</a> or <a href="mailto:hello@davcd.com">contact</a> me!</p>
+                        <p class="margin">Meet my <a href="https://www.linkedin.com/in/davcd/" target="_blank">skills</a>, know more <a href="https://www.instagram.com/davcd/" target="_blank">about</a> me, take a look at my <a href="https://github.com/davcd" target="_blank">code</a>, check my <a href="https://twitter.com/davcd_" target="_blank">tweets</a> or <a href="mailto:hello&#64;davcd.com">contact</a> me!</p>
                     </div>
-                    <div class="avatar">
+                    <div class="portrait">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 828.25 1019.56">
+                            <title>davcd Portrait</title>
                             <defs>                                
                                 <linearGradient id="a" x1="965.43" y1="589.34" x2="965.43" y2="627.28" gradientUnits="userSpaceOnUse">
                                     <stop offset="0" stop-color="#b8836f" />
@@ -127,7 +129,7 @@
                 <div class="contact">
                     <div class="scheme">
                         <div class="text top email">
-                            <a href="mailto:hello@davcd.com">
+                            <a href="mailto:hello&#64;davcd.com">
                                 <div>
                                     <p>email</p>
                                 </div>
@@ -135,18 +137,15 @@
                             </a>
                         </div>
                         <div class="text top web" onmouseover="moverWeb()" onmouseleave="resetEmail()">
-                            <a href="https://davcd.com">
+                            <a href="https://davcd.com/">
                                 <div>
                                     <p>web</p>
                                 </div>
                                 <div class="bracket"></div>
                             </a>
                         </div>                        
-                        <svg id="email" viewBox="0 0 787 148" onclick="selectEmail();">
-                            <text id="hello" x="0" y="100">hello</text>
-                            <text id="at" x="216" y="100">@</text>
-                            <text x="311.5" y="100">davcd</text>
-                            <text id="dotcom" x="574.2" y="100">.com</text>
+                        <svg id="email" viewBox="0 0 787 148" onclick="selectEmail();" ontouchstart="selectEmail();">
+                            <text x="0" y="100"><tspan id="hello">hello</tspan><tspan id="at">&#64;</tspan><tspan>davcd</tspan><tspan id="dotcom">.com</tspan></text>
                         </svg>
                         <div id="social" class="text bottom social" onmouseover="moverSocial()" onmouseleave="resetEmail()">
                             <div class="bracket"></div>
@@ -160,6 +159,7 @@
                         <span class="linkedin">
                             <a href="https://www.linkedin.com/in/davcd/" target="_blank">
                                 <svg viewBox="0 0 36 36">
+                                    <title>LinkedIn</title>
                                     <path d="M33.34,0H2.66A2.63,2.63,0,0,0,0,2.6V33.4A2.63,2.63,0,0,0,2.66,36H33.34A2.63,2.63,0,0,0,36,33.4V2.6A2.63,2.63,0,0,0,33.34,0ZM10.68,30.68H5.33V13.5h5.34ZM8,11.15a3.1,3.1,0,1,1,3.09-3.1A3.1,3.1,0,0,1,8,11.15ZM30.68,30.68H25.34V22.32c0-2,0-4.56-2.77-4.56s-3.2,2.17-3.2,4.41v8.5H14V13.5h5.12v2.35h.07a5.61,5.61,0,0,1,5.05-2.77c5.41,0,6.41,3.56,6.41,8.18Z"/>
                                 </svg>
                             </a>
@@ -167,6 +167,7 @@
                         <span class="github">
                             <a href="https://github.com/davcd" target="_blank">
                                 <svg viewBox="0 0 32.58 31.77">
+                                    <title>GitHub</title>
                                     <path d="M16.29,0a16.29,16.29,0,0,0-5.15,31.75c.81.15,1.11-.35,1.11-.79s0-1.41,0-2.77C7.7,29.18,6.74,26,6.74,26a4.31,4.31,0,0,0-1.81-2.38c-1.48-1,.11-1,.11-1a3.42,3.42,0,0,1,2.5,1.68,3.47,3.47,0,0,0,4.74,1.35,3.48,3.48,0,0,1,1-2.18C9.7,23.08,5.9,21.68,5.9,15.44a6.3,6.3,0,0,1,1.68-4.37,5.86,5.86,0,0,1,.16-4.31s1.37-.44,4.48,1.67a15.44,15.44,0,0,1,8.16,0c3.11-2.11,4.48-1.67,4.48-1.67A5.85,5.85,0,0,1,25,11.07a6.29,6.29,0,0,1,1.67,4.37c0,6.26-3.81,7.63-7.44,8a3.89,3.89,0,0,1,1.11,3c0,2.18,0,3.93,0,4.47s.29.94,1.12.78A16.29,16.29,0,0,0,16.29,0Z"/>
                                 </svg>
                             </a>
@@ -174,6 +175,7 @@
                         <span class="stackoverflow">
                             <a href="https://stackoverflow.com/users/9522410/davcd" target="_blank">
                                 <svg viewBox="0 0 73.1 86.6">
+                                    <title>Stack Overflow</title>
                                     <path class="gray" d="M61.8,78.9V55.7h7.7V86.6H0V55.7H7.7V78.9Z"/>
                                     <path class="orange" d="M16.2,53.5,54,61.4l1.6-7.6L17.8,45.9Zm5-18,35,16.3,3.2-7-35-16.4Zm9.7-17.2L60.6,43l4.9-5.9L35.8,12.4ZM50.1,0,43.9,4.6l23,31L73.1,31ZM15.4,71.1H54V63.4H15.4Z"/>
                                 </svg>
@@ -182,6 +184,7 @@
                         <span class="medium">
                             <a href="https://medium.com/@davcd" target="_blank">
                                 <svg viewBox="0 0 131 104">
+                                    <title>Medium</title>
                                     <path d="M15.53,21.22a5.07,5.07,0,0,0-1.65-4.28L1.65,2.2V0h38L69,64.38,94.79,0H131V2.2l-10.46,10a3.06,3.06,0,0,0-1.16,2.93V88.84a3.06,3.06,0,0,0,1.16,2.93l10.21,10V104H79.38v-2.2L90,91.53c1-1,1-1.35,1-2.93V29L61.59,103.76h-4L23.36,29V79.12a6.91,6.91,0,0,0,1.9,5.75L39,101.55v2.2H0v-2.2L13.76,84.86a6.66,6.66,0,0,0,1.77-5.75Z"/>                                
                                 </svg>
                             </a>
@@ -189,6 +192,7 @@
                         <span class="twitter">
                             <a href="https://twitter.com/davcd_" target="_blank">
                                 <svg viewBox="0 0 250 203.14">
+                                    <title>Twitter</title>
                                     <path d="M78.62,203.14C173,203.14,224.56,125,224.56,57.2c0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,250,24a102.38,102.38,0,0,1-29.46,8.07A51.47,51.47,0,0,0,243.09,3.72a102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,17.4,9.36,51.33,51.33,0,0,0,33.28,77.83,50.91,50.91,0,0,1,10,71.41v.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,0,180.1a145.21,145.21,0,0,0,78.62,23"/>                                
                                 </svg>
                             </a>
@@ -196,6 +200,7 @@
                         <span class="instagram">
                             <a href="https://www.instagram.com/davcd/" target="_blank">
                                 <svg viewBox="0 0 503.84 503.84">
+                                    <title>Instagram</title>
                                     <defs>
                                         <radialGradient id="instagram-gradient" r="150%" cx="30%" cy="107%">
                                             <stop stop-color="#fdf497" offset="0" />
@@ -214,6 +219,7 @@
                         <span class="telegram">
                             <a href="https://t.me/davcd" target="_blank">
                                 <svg viewBox="0 0 256 256">
+                                    <title>Telegram</title>
                                     <circle cx="128" cy="128" r="128"/>
                                     <path class="white" d="m 155.91221,156.28613 c 3.82213,-10.4461 17.81729,-50.17266 20.06432,-60.591798 2.54062,-11.780443 -2.77796,-12.930544 -14.87454,-8.979356 -12.09657,3.951189 -43.11909,15.449414 -48.34049,17.302714 -5.2214,1.8533 -30.641435,10.39687 -35.911664,12.9461 -10.764524,5.77386 -5.528019,14.58535 6.505791,19.16062 35.967683,17.26467 25.754703,8.46685 41.812423,40.41274 3.30464,8.16089 11.09674,22.06171 18.5597,11.55404 3.92326,-5.97624 9.17875,-23.5903 12.18446,-31.80506 z"/>
                                 </svg>

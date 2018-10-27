@@ -113,88 +113,88 @@ header a svg path {
   margin-top: 30px;
 }
 
-.avatar {
+.portrait {
   display: inline-block;
   width: 20%;
   margin: 0;
   padding: 0;
 }
 
-.avatar .b,
-.avatar .c,
-.avatar .g,
-.avatar .o,
-.avatar .p {
+.portrait .b,
+.portrait .c,
+.portrait .g,
+.portrait .o,
+.portrait .p {
   opacity: 0.45;
 }
 
-.avatar .h,
-.avatar .j,
-.avatar .r {
+.portrait .h,
+.portrait .j,
+.portrait .r {
   opacity: 0.75;
 }
 
-.avatar .e {
+.portrait .e {
   opacity: 0.2;
 }
 
-.avatar .l,
-.avatar .o,
-.avatar .r {
+.portrait .l,
+.portrait .o,
+.portrait .r {
   fill: #ab887a;
 }
 
-.avatar .a {
+.portrait .a {
   fill: #f0ccb2;
 }
 
-.avatar .e,
-.avatar .q {
+.portrait .e,
+.portrait .q {
   fill: #4e4359;
 }
 
-.avatar .h {
+.portrait .h {
   fill: #ffadab;
 }
 
-.avatar .i {
+.portrait .i {
   fill: #593527;
 }
 
-.avatar .k {
+.portrait .k {
   fill: #444444;
 }
 
-.avatar .d {
+.portrait .d {
   opacity: 0.4;
   fill: #e4ae94;
 }
 
-.avatar .m {
+.portrait .m {
   fill: url(#e);
 }
 
-.avatar .n {
+.portrait .n {
   fill: url(#f);
 }
 
-.avatar .p {
+.portrait .p {
   fill: url(#g);
 }
 
-.avatar .b {
+.portrait .b {
   fill: url(#a);
 }
 
-.avatar .c {
+.portrait .c {
   fill: url(#b);
 }
 
-.avatar .g {
+.portrait .g {
   fill: url(#d);
 }
 
-.avatar .f {
+.portrait .f {
   opacity: 0.5;
   fill: url(#c);
 }
@@ -207,13 +207,13 @@ header a svg path {
     text-align: center;
     display: block;
   }
-  .avatar {
+  .portrait {
     float: none;
     width: 100%;
     height: auto;
     text-align: center;
     display: block;
-    max-width: 200px;
+    max-width: 180px;
     margin: 40px auto 0 auto;
   }
 }
@@ -250,17 +250,21 @@ header a svg path {
 .scheme .text.email {
   width: 99%;
   margin-left: 0.5%;
+  left: -2px;
 }
 
 .scheme .text.web {
   margin-top: 4%;
-  width: 59.75%;
-  margin-left: 39.75%;
+  margin-bottom: 1%;
+  width: 59.65%;
+  margin-left: 39.85%;
+  left: -2px;
 }
 
 .scheme .text.social {
-  width: 44.5%;
-  margin-left: 27.75%;
+  width: 44.80%;
+  margin-left: 27.85%;
+  left: -2px;
 }
 
 .scheme .text p {
@@ -297,7 +301,7 @@ header a svg path {
 }
 
 .scheme .text.bottom p {
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .scheme .text.top p {

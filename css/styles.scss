@@ -178,7 +178,7 @@ header{
     }
 }
 
-.avatar{
+.portrait{
     display: inline-block;
     width:20%;
     margin:0;
@@ -273,9 +273,9 @@ header{
         @include content-responsive;
     }
 
-    .avatar{
+    .portrait{
         @include content-responsive;
-        max-width: 200px;
+        max-width: 180px;
         margin:40px auto 0 auto;
     }
 }
@@ -315,17 +315,21 @@ header{
         &.email{
             width: 99%;
             margin-left:0.5%;
+            left:-2px;
         }
     
         &.web{
             margin-top:4%;
-            width: 59.75%;
-            margin-left:39.75%;
+            margin-bottom: 1%;
+            width: 59.65%;
+            margin-left:39.85%;
+            left:-2px;
         }
     
         &.social{
-            width: 44.5%;
-            margin-left:27.75%;
+            width: 44.80%;
+            margin-left:27.85%;
+            left:-2px;
         }
 
         p{
@@ -364,7 +368,7 @@ header{
         }
 
         &.bottom p{
-            margin-top:4px;
+            margin-top:6px;
         }
     
         &.top p{

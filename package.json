@@ -1,0 +1,31 @@
+{
+  "name": "davcd.com",
+  "version": "1.0.0",
+  "author": "davcd",
+  "description": "Project for my personal website",
+  "scripts": {
+    "deploy": "gulp build && node index.js",
+    "develop": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/davcd/davcd.com.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davcd/davcd.com/issues"
+  },
+  "homepage": "https://github.com/davcd/davcd.com#readme",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.46.0",
+    "browser-sync": "^2.27.7",
+    "dotenv": "^16.0.0",
+    "fs-readdir-recursive": "^1.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.9"
+  }
+}

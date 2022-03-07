@@ -1,0 +1,20 @@
+div(class="scheme")
+    div(class="text top email")
+        div
+            p email
+        div(class="bracket")
+    div(class="text top web" onmouseover="moverWeb()" onmouseleave="resetEmail()")
+        div
+            p web
+        div(class="bracket")
+    a(href="mailto:hello&#64;davcd.com")
+        svg(id="email" viewBox="0 0 787 148")
+            text(x="0" y="100")
+                tspan(id="hello") hello
+                tspan(id="at") &#64;
+                tspan davcd
+                tspan(id="dotcom") .com
+    div(id="social" class="text bottom social" onmouseover="moverSocial()" onmouseleave="resetEmail()")
+        div(class="bracket")
+        div
+            p social

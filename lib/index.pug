@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        include assets/head
+    body
+        div(class="wrapper")
+            div(class="container separator")
+                header
+                    a(href="https://davcd.com/")
+                        include svg/logo.svg
+            div(class="container separator margin")
+                div(class="content")
+                    div(class="about")
+                        include assets/hello
+                        div(class="avatar")
+                            include svg/avatar.svg
+            div(class="container margin")
+                div(class="content")
+                    div(class="contact")
+                        include assets/scheme
+                        include assets/links
+
+        script
+            include js/index.js
